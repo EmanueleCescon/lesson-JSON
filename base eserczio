@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prova utilizzo di JSON</title>
+</head>
+<body>
+	<h3>Esercizio di JSON </h3>
+	<p> Lettura di u file in console </p>
+	<script src="file://C:/xampp/htdocs/Esercizi-javascipt/JSON/Studenti.json"></script>
+	<script>
+		// leggo un file JSON con il metodo fetch()
+		// importo anche il CDN di jQuery per importare gli stessi file con IQuery.ajax()
+		
+		// uso di fetch()
+		let miaVar = JSON.stringify(new URL('Studenti.json'));
+		console.log(miaVar);
+
+		(async () => {
+				const response = fetch(miaVar);
+				console.log(response);
+				}
+			)();
+		
+		// racchiudo il tutto fra parentesi tonde per effettuarme la chiamata
+
+	</script>
+</body>
+</html>
